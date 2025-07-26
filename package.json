@@ -1,0 +1,23 @@
+{
+  "name": "teste-automatizado-epicgames",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/euopaulin/Teste-automatizado-EpicGames.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/euopaulin/Teste-automatizado-EpicGames/issues"
+  },
+  "homepage": "https://github.com/euopaulin/Teste-automatizado-EpicGames#readme",
+  "devDependencies": {
+    "cypress": "^14.5.3"
+  }
+}
