@@ -28,6 +28,30 @@ describe('Teste automatizado Epic Games', () => {
   it('Entrar no campo de texto de tags', () => {
     cy.visit('https://qaplayground.dev/');
     cy.get('[href="/apps/tags-input-box/"] > .card-content > h3').click();
+    cy.get('input[type="text"]').type('Cypress{enter}');
+    cy.get('input[type="text"]').type('Python{enter}');
+    cy.get('input[type="text"]').type('CSS{enter}');
+    cy.get('input[type="text"]').type('HTML{enter}');
+    cy.get('input[type="text"]').type('VSCODE{enter}');
+    cy.get('input[type="text"]').type('NODE{enter}');
+    cy.get('input[type="text"]').type('QA{enter}');
+    cy.get('input[type="text"]').type('SOFTWARE{enter}');
+    cy.get('input[type="text"]').type('TI{enter}');
+    cy.get('input[type="text"]').type('PYGAME{enter}');
+    cy.get('ul > :nth-child(10)').should('be.visible');
+    cy.get('input[type="text"]').type('pAULO{enter}');
 
+    cy.get('button').contains('Remove All').click();
   });  
+
+  it('Acessar outra funcionalidade', () => {
+    cy.visit('https://qaplayground.dev/#apps');
+
+    cy.contains('Multi Level Dropdown').click();
+
+    cy.get(':nth-child(4) > a.icon-button').click();
+
+    cy.get('[href="#settings"]').click();
+
+  });
 });
