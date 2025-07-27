@@ -39,7 +39,7 @@ describe('Teste automatizado Epic Games', () => {
     cy.get('input[type="text"]').type('TI{enter}');
     cy.get('input[type="text"]').type('PYGAME{enter}');
     cy.get('ul > :nth-child(10)').should('be.visible');
-    cy.get('input[type="text"]').type('pAULO{enter}');
+    cy.get('input[type="text"]').type('pAULO{enter}')
 
     cy.get('button').contains('Remove All').click();
   });  

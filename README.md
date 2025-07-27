@@ -1,14 +1,14 @@
-# Casos de testes automatizados QA Playground
+# 🚧 Casos de testes automatizados QA Playground
 
 Obejtivo dos testes é verificar se o site atende os requisitos de usababilidade e conformidade esperados para uma boa interação do usuário.
 
-## Ferramentas
+## 🛠️ Ferramentas
 
 VScode
 
 Cypress
 
-## Case de testes
+## 🧪 Case de testes
 
 1 - Acesso e primeira atividade
 
@@ -21,4 +21,3 @@ Cypress
     - O usuário tem que conseguir digitar os 6 digitos
     - Após isso deve aparecer uma info de "Sucess"
     - Cypress irá verificar se a mensagem está visivel
-    
