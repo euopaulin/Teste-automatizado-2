@@ -25,4 +25,9 @@ describe('Teste automatizado Epic Games', () => {
 
   });
 
+  it('Entrar no campo de texto de tags', () => {
+    cy.visit('https://qaplayground.dev/');
+    cy.get('[href="/apps/tags-input-box/"] > .card-content > h3').click();
+
+  });  
 });
