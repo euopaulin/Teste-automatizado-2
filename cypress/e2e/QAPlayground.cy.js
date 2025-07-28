@@ -1,5 +1,8 @@
-describe('Teste automatizado Epic Games', () => {
-
+describe('Teste de case automatizado no site QA Playground', () => {
+  //Usuário acessa o site
+  //Clica no botão Verify Your Account
+  //Preenche o campo de verificação com o código 999999
+  //Verifica se a mensagem de sucesso é exibida
   it('Acessar o site', () => {
     cy.visit('https://qaplayground.dev/');
     cy.contains('Verify Your Account').click();
@@ -16,6 +19,10 @@ describe('Teste automatizado Epic Games', () => {
     cy.get('.info').click();
   });
 
+  //Usuário acessa o site novamente
+  //Clica no link QA Playground
+  //Cypress verifica se o link está visível
+  
   it('Acessar o site novamente', () => {
     cy.visit('https://qaplayground.dev/apps/verify-account/');
 
@@ -25,6 +32,11 @@ describe('Teste automatizado Epic Games', () => {
 
   });
 
+  //Usuário acessa o site novamente
+  //Clica no link de Tags Input Box
+  //Ele preenche o campo de texto com várias tags e pressiona enter para cada uma
+  //Cypress verifica se a última tag inserida está visível
+  //Cypress remove todas as tags inseridas
   it('Entrar no campo de texto de tags', () => {
     cy.visit('https://qaplayground.dev/');
     cy.get('[href="/apps/tags-input-box/"] > .card-content > h3').click();
@@ -44,6 +56,11 @@ describe('Teste automatizado Epic Games', () => {
     cy.get('button').contains('Remove All').click();
   });  
 
+
+  //Usuário acessa o site novamente
+  //Clica no link de Multi Level Dropdown
+  //Cypress clica no botão de ícone de configurações
+  //Cypress clica no link de configurações
   it('Acessar outra funcionalidade', () => {
     cy.visit('https://qaplayground.dev/#apps');
 
