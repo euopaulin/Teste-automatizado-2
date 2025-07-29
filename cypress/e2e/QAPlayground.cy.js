@@ -3,19 +3,18 @@ describe('Teste de case automatizado no site QA Playground', () => {
   //Clica no botão Verify Your Account
   //Preenche o campo de verificação com o código 999999
   //Verifica se a mensagem de sucesso é exibida
+
+  //1
   it('Acessar o site', () => {
     cy.visit('https://qaplayground.dev/');
     cy.contains('Verify Your Account').click();
-
     cy.get('.code-container > :nth-child(1)').type('9');
     cy.get('.code-container > :nth-child(2)').type('9');
     cy.get('.code-container > :nth-child(3)').type('9');
     cy.get('.code-container > :nth-child(4)').type('9');
     cy.get('.code-container > :nth-child(5)').type('9');
     cy.get('.code-container > :nth-child(6)').type('9');
-
     cy.get('.info').should('be.visible');
-
     cy.get('.info').click();
   });
 
@@ -23,11 +22,10 @@ describe('Teste de case automatizado no site QA Playground', () => {
   //Clica no link QA Playground
   //Cypress verifica se o link está visível
   
+  //2
   it('Acessar o site novamente', () => {
     cy.visit('https://qaplayground.dev/apps/verify-account/');
-
     cy.get('.topnav-links > .item').click();
-
     cy.get('span').contains('QA Playground').should('be.visible');
 
   });
@@ -37,6 +35,8 @@ describe('Teste de case automatizado no site QA Playground', () => {
   //Ele preenche o campo de texto com várias tags e pressiona enter para cada uma
   //Cypress verifica se a última tag inserida está visível
   //Cypress remove todas as tags inseridas
+
+  //3
   it('Entrar no campo de texto de tags', () => {
     cy.visit('https://qaplayground.dev/');
     cy.get('[href="/apps/tags-input-box/"] > .card-content > h3').click();
@@ -61,14 +61,21 @@ describe('Teste de case automatizado no site QA Playground', () => {
   //Clica no link de Multi Level Dropdown
   //Cypress clica no botão de ícone de configurações
   //Cypress clica no link de configurações
+
+  //4
   it('Acessar outra funcionalidade', () => {
     cy.visit('https://qaplayground.dev/#apps');
-
     cy.contains('Multi Level Dropdown').click();
-
     cy.get(':nth-child(4) > a.icon-button').click();
-
     cy.get('[href="#settings"]').click();
+    cy.get('[href="#!JavaScript"]').click()
+    cy.get('.topnav-links > .item').should('be.visible');
 
+    if (cy.get('.topnav-links > .item').should('exist')) {
+      cy.get('.topnav-links > .item').click();
+    }
+    else {
+      cy.get('.gradient-text').click();
+    }    
   });
 });
