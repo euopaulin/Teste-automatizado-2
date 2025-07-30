@@ -61,6 +61,8 @@ describe('Teste de case automatizado no site QA Playground', () => {
   //Clica no link de Multi Level Dropdown
   //Cypress clica no botão de ícone de configurações
   //Cypress clica no link de configurações
+  //Clica no JavaScript
+  //E por fim retorna a página principal
 
   //4
   it('Acessar outra funcionalidade', () => {
